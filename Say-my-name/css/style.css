@@ -1,0 +1,217 @@
+/* GIVING A SMOOTH SCROLL BEHAVIOUR TO THE HTML*/
+
+html{
+scroll-behavior: smooth;
+}
+
+/* REMOVING MARGINS FROM THE BODY */
+
+body {
+    margin: 0;
+}
+
+/* SPECIFYING FONT FAMILIES */
+
+/* GIVING A FONT TO EVERY H1 TAG IN THE DOC AND ALSO GIVING IT MINOR STYLING */
+
+h1{
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 40px;
+    color: white;
+}
+
+/* STYLING THE SONG INFO CLASS*/
+
+.song_info > p {
+    font-family: "Sora", sans-serif;
+    font-weight: bold;
+    font-size: 26px;
+    color:red;
+}
+
+.artist_name{
+    color: red;
+}
+
+.song_name{
+    font-family: "Playfair Display", serif;
+}
+
+/* IMPORTANT : STYLING THE FIRST , THIRD AND FIFTH CLASS P TAGS AS THEY HAVE THE SAME LAYOUT AND STYLING  */
+
+.first-part p,
+.third-part p ,.fifth-part p{ /*GIVING A GOOD BOLD FONT */
+    font-family: "Sora", sans-serif;
+    font-weight: bold; /*CHANGING THE STYLE  */
+    font-size: 29px;
+    color: black;
+
+}
+
+/*GIVING SPECIAL STYLING TO THE SPAN TAGS OF THE ABOVE MENTIONED ELEMENTS  TO MAKE THEM POP*/
+
+.first-part p span,
+.third-part p span,.fifth-part p span {
+    /* GIVING A THEME MATCHING FONT FAMILY */
+    color: white ;
+    font-size: 40px;
+    font-family: "Anton", sans-serif;
+    text-shadow: /*GIVING A TEXT SHADOW TO THE SPANS TO MAKE THEM LOOK EVEN BETTER */
+            1px 1px 2px rgba(0, 0, 0, 0.7),
+            0 0 5px rgba(0, 0, 0, 0.5);  /* A SLIGHT GLOW EFFECT*/
+}
+
+/*SIMILAR WORK WITH THE REST OF THE PARTS OF THE SONG  */
+
+.second-part p,.fourth-part p {
+    font-family: "Playfair Display", serif;
+    font-weight: bold;
+    font-size: 35px;
+    color: white;
+}
+
+/* DIFFERENT FONT FAMILIES AND SIZES AND THINGS TO MAKE IT LOOK MORE INTERACTIVE AND CONNECTING*/
+
+.second-part p span,.fourth-part p span {
+    font-family: "Permanent Marker", cursive;
+    color: black ;
+    font-size: 40px;
+    text-shadow:
+            1px 1px 3px rgba(255, 255, 255, 0.9),
+            2px 2px 5px rgba(255, 255, 255, 0.7);
+}
+
+/*STYLING THE NAV BAR THAT HAS THE KRSNA LOGO */
+
+.navbar {
+    background-color: black; /*GIVINIG IT A BLACK BACKGROUND */
+    border-bottom: 4px solid red; /* GIVING IT A SLIGHT RED BORDER TO IMPROVE THE CONTRAST */
+    height: 80px;
+    display: flex;/*CREATING IT AS A FLEX CONATINER  */
+    /*PUTTING THE CONTENT IN THE CENTRE */
+    justify-content: center;
+    align-items: center;
+    position: sticky; /* MAKING THE LOGO STICKY */
+}
+
+/*THE CLASS THAT HAS THE KRSNA LOGO IMAGE  */
+.logo {
+    height: 70px; /* ADJUSTING HEIGHT AS PER THE NEED  */
+    width: auto;
+}
+
+/*GIVING SLIGHT MARGIN TO ALL THE P TAGS IN THE DOC  */
+
+p{
+    margin: 7px;
+}
+
+/*STYLING EVERYTHING RELATED TO THE SONG DESCRIPTION PART*/
+
+.song_info{
+    height: auto;
+    display: flex;
+    background: black;
+    padding: 20px;
+}
+
+.song_description {
+    flex: 1;
+    display: flex;
+    align-items: center;
+
+    justify-content: space-evenly;
+    flex-direction: column;
+    gap: 2em;
+    padding: 0 2.5em;
+}
+
+.song_name{
+    letter-spacing: .1em;
+    font-size: 5em;
+    font-weight: 700;
+    color: white;
+}
+
+.about_song{
+    font-size: 20px;
+    letter-spacing: .1em;
+    line-height: 1.1em;
+    color: orangered;
+}
+
+/* TARGETING THE MAIN ID THAT HAS ALL THE LYRICS IN IT.*/
+
+#main_lyrics {
+    /* AUTO HEIGHT AND 100% WIDTH TO STABALIZE THE ASPECT RATIO*/
+    height: auto;
+    width: 100%;
+    /*GIVING IT A SMOOTH LINEAR GRADIENT OF BLACK ADN RED  */
+    background: linear-gradient(to right, red, black);
+    background-size: cover;
+    display: flex; /*MAKING IT A FLEX CONTAINER  */
+    /*CENTRE ALIGNING THE TEXT  */
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    /* ADDING BACK THE RED BORDERS*/
+    border-top: 4px solid red;
+    border-bottom: 4px solid red;
+    flex-direction: column;
+    margin-bottom: 0;
+}
+
+.first-part, .second-part {
+    /* BASIC STYLING OF THE CONTAINER DIV(S) */
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    color: white;
+}
+
+.album-cover {
+    max-width: 150px; /* Set a smaller size for the album cover */
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* STYLING THE MULTI BACKGROUND SECTION */
+.multi-bg {
+    height: 100vh;
+    background-image: url('../img/mv_photo3.jpg'), url('../img/mv_photo1.jpg');
+    background-size: 50% 100%; /*EACH PHOTO GETS 50% */
+    background-position: right bottom, left top;
+    background-repeat: no-repeat; /* WILL NOT REPEAT */
+    display: flex; /*MAKING IT A FLEX CONTAINER  */
+    flex-direction: column; /*MAKING CONTENT VERTICLE  */
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+/* STYLING THE IFRAME AND THE BACKGROUND FOR IT  */
+#music_video {
+    position: relative;
+    /*GIVING IT A RADIAL GRADIENT  */
+    background: radial-gradient(circle, rgba(255, 0, 0, 1), rgba(0, 0, 0, 1));
+    background-size: cover; /* COVERS THE ENTIRE SECTION */
+    height: 500px;
+    display: flex; /* MAKING IT FLEX CONTAINER */
+    justify-content: center;
+    align-items: center;
+}
+
+.video-container {
+    /*GIVING THE CONTAINER A RELATIVE POSITION AND A FIXED ASPECT RATIO */
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    aspect-ratio: 16 / 9;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+}
